@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elektryk Opole – A.D.S Elektroinstalacje | Instalacje elektryczne</title>
+  <meta name="description" content="Profesjonalne instalacje elektryczne w Opolu i okolicy. Monitoring, alarmy, modernizacje. Skontaktuj się już dziś!" />
+  <meta name="keywords" content="elektryk Opole, instalacje elektryczne Opole, monitoring Opole, alarmy Opole, elektroinstalacje Opole" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ads-elektroinstalacje.pl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Elektryk Opole – A.D.S Elektroinstalacje" />
+  <meta property="og:description" content="Profesjonalne instalacje elektryczne w Opolu i okolicy." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ========================
+       CSS VARIABLES & RESET
+    ======================== */
+    :root {
+      --navy: #0d1b2a;
+      --navy-mid: #162336;
+      --navy-light: #1e3050;
+      --graphite: #1a2332;
+      --yellow: #f5a623;
+      --yellow-dark: #d4891a;
+      --yellow-light: #ffc04d;
+      --white: #ffffff;
+      --off-white: #f4f6f9;
+      --gray-100: #e8ecf0;
+      --gray-300: #b0bec5;
+      --gray-500: #78909c;
+      --gray-700: #455a64;
+      --text-main: #e8ecf0;
+      --text-muted: #8fa0b0;
+      --text-dark: #1a2332;
+      --radius: 4px;
+      --radius-lg: 8px;
+      --transition: 0.25s ease;
+      --shadow: 0 4px 24px rgba(0,0,0,0.35);
+      --shadow-lg: 0 8px 48px rgba(0,0,0,0.45);
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--navy);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ========================
+       UTILITY
+    ======================== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section--dark { background: var(--navy); }
+    .section--mid { background: var(--navy-mid); }
+    .section--light { background: var(--navy-light); }
+    .section--accent { background: var(--yellow); }
+
+    .section-tag {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    .text-yellow { color: var(--yellow); }
+    .text-center { text-align: center; }
+    .text-center .section-subtitle { margin: 0 auto; }
+
+    /* ========================
+       BUTTONS
+    ======================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: none;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+    .btn-primary:hover {
+      background: var(--yellow-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245,166,35,0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.4);
+    }
+    .btn-outline:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+      transform: translateY(-2px);
+    }
+    .btn-lg { padding: 18px 40px; font-size: 1.1rem; }
+    .btn-sm { padding: 10px 22px; font-size: 0.9rem; }
+
+    /* ========================
+       NAVIGATION
+    ======================== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(245,166,35,0.15);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .nav.scrolled {
+      background: rgba(13, 27, 42, 0.99);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .nav-logo-main {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1;
+    }
+    .nav-logo-main span { color: var(--yellow); }
+    .nav-logo-sub {
+      font-size: 0.65rem;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-link {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      transition: color var(--transition), background var(--transition);
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--yellow);
+      background: rgba(245,166,35,0.08);
+    }
+    .nav-cta {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--yellow);
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      margin-left: 8px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .nav-cta:hover { background: var(--yellow-light); transform: translateY(-1px); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: var(--navy-mid);
+      border-bottom: 1px solid rgba(245,166,35,0.15);
+      padding: 20px 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu-link {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      border: none;
+      background: none;
+      text-align: left;
+      width: 100%;
+      transition: all var(--transition);
+    }
+    .mobile-menu-link:hover, .mobile-menu-link.active {
+      color: var(--yellow);
+      background: rgba(245,166,35,0.08);
+    }
+    .mobile-menu-cta {
+      margin-top: 12px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 16px;
+      border-radius: var(--radius);
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+    }
+
+    /* ========================
+       FLOATING CALL BUTTON (mobile)
+    ======================== */
+    .floating-call {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 998;
+      background: var(--yellow);
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 16px 20px;
+      border-radius: 50px;
+      box-shadow: 0 6px 24px rgba(245,166,35,0.5);
+      align-items: center;
+      gap: 8px;
+      animation: pulse-btn 2.5s infinite;
+    }
+    @keyframes pulse-btn {
+      0%, 100% { box-shadow: 0 6px 24px rgba(245,166,35,0.5); }
+      50% { box-shadow: 0 6px 36px rgba(245,166,35,0.8); }
+    }
+
+    /* ========================
+       PAGES SYSTEM
+    ======================== */
+    .page { display: none; padding-top: 70px; }
+    .page.active { display: block; }
+
+    /* ========================
+       HOME – HERO
+    ======================== */
+    .hero {
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(245,166,35,0.07) 0%, transparent 60%),
+        linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, var(--graphite) 100%);
+    }
+    .hero-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245,166,35,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,166,35,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,166,35,0.12);
+      border: 1px solid rgba(245,166,35,0.3);
+      color: var(--yellow);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--yellow);
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.7s ease 0.1s forwards;
+      opacity: 0;
+    }
+    .hero-title .accent-line {
+      display: block;
+      color: var(--yellow);
+      font-size: 0.65em;
+      letter-spacing: 0px;
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      animation: fadeInUp 0.7s ease 0.2s forwards;
+      opacity: 0;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.7s ease 0.3s forwards;
+      opacity: 0;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 48px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      animation: fadeInUp 0.7s ease 0.4s forwards;
+      opacity: 0;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 2.4rem;
+      color: var(--yellow);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Decorative element */
+    .hero-deco {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 480px;
+      height: 480px;
+      border: 1px solid rgba(245,166,35,0.12);
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .hero-deco::after {
+      content: '';
+      position: absolute;
+      inset: 40px;
+      border: 1px solid rgba(245,166,35,0.06);
+      border-radius: 50%;
+    }
+    .hero-bolt {
+      position: absolute;
+      right: 14%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      opacity: 0.06;
+    }
+    .hero-bolt svg { width: 280px; height: 280px; }
+
+    /* ========================
+       INTRO STRIP
+    ======================== */
+    .intro-strip {
+      background: var(--yellow);
+      padding: 20px 0;
+      overflow: hidden;
+    }
+    .intro-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .intro-strip-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .intro-strip-dot {
+      width: 6px; height: 6px;
+      background: var(--navy);
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+
+    /* ========================
+       SERVICES OVERVIEW
+    ======================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+      margin-top: 60px;
+    }
+    .service-card {
+      background: var(--navy-mid);
+      padding: 40px 32px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background var(--transition);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 3px;
+      background: var(--yellow);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover { background: var(--navy-light); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 56px; height: 56px;
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.2);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: background var(--transition);
+    }
+    .service-card:hover .service-icon {
+      background: rgba(245,166,35,0.2);
+    }
+    .service-icon svg { width: 28px; height: 28px; color: var(--yellow); }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+    .service-card .arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-top: 20px;
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: all var(--transition);
+    }
+    .service-card:hover .arrow { opacity: 1; transform: translateX(0); }
+
+    /* ========================
+       WHY US
+    ======================== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .why-item {
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .why-num {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 3rem;
+      color: rgba(245,166,35,0.15);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .why-icon-wrap {
+      width: 64px; height: 64px;
+      background: rgba(245,166,35,0.08);
+      border: 1px solid rgba(245,166,35,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .why-icon-wrap svg { width: 28px; height: 28px; color: var(--yellow); }
+    .why-item h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+    .why-item p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* ========================
+       CTA BANNER
+    ======================== */
+    .cta-banner {
+      background: var(--yellow);
+      padding: 64px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .cta-banner-content { position: relative; z-index: 1; }
+    .cta-banner h2 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    .cta-banner p { font-size: 1.1rem; color: var(--navy); opacity: 0.75; margin-bottom: 32px; }
+    .cta-phone-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      color: var(--navy);
+      border: 3px solid var(--navy);
+      padding: 16px 40px;
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+    .cta-phone-big:hover {
+      background: var(--navy);
+      color: var(--yellow);
+    }
+
+    /* ========================
+       ABOUT PAGE
+    ======================== */
+    .about-hero {
+      background: var(--navy-mid);
+      padding: 80px 0 60px;
+      border-bottom: 1px solid rgba(245,166,35,0.1);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-top: 60px;
+    }
+    .about-image-block {
+      position: relative;
+    }
+    .about-img-placeholder {
+      aspect-ratio: 4/3;
+      background: var(--navy-light);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(245,166,35,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .about-img-placeholder svg { width: 48px; height: 48px; opacity: 0.2; }
+    .about-img-placeholder span { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+    .about-year-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-weight: 900;
+      padding: 20px 24px;
+      text-align: center;
+      border-radius: var(--radius-lg);
+    }
+    .about-year-badge .year { font-size: 2.4rem; line-height: 1; display: block; }
+    .about-year-badge .label { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; }
+    .about-text { }
+    .about-text p { color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
+    .owner-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--navy-light);
+      border: 1px solid rgba(245,166,35,0.1);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      margin-top: 12px;
+    }
+    .owner-avatar {
+      width: 52px; height: 52px;
+      background: rgba(245,166,35,0.12);
+      border: 2px solid rgba(245,166,35,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--yellow);
+    }
+    .owner-info { }
+    .owner-name { font-family: var(--font-display); font-weight: 700; font-size: 1rem; text-transform: uppercase; }
+    .owner-role { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .trust-item {
+      background: var(--navy-mid);
+      border: 1px solid rgba(245,166,35,0.08);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      gap: 16px;
+    }
+    .trust-icon {
+      width: 44px; height: 44px;
+      background: rgba(245,166,35,0.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .trust-icon svg { width: 22px; height: 22px; color: var(--yellow); }
+    .trust-item h4 { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; text-transform: uppercase; margin-bottom: 6px; }
+    .trust-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* ========================
+       SERVICES PAGE
+    ======================== */
+    .services-page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 80px 0 60px;
+      border-bottom: 1px solid rgba(245,166,35,0.1);
+    }
+    .service-category {
+      padding: 60px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .service-category:last-of-type { border-bottom: none; }
+    .cat-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .cat-num {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 4rem;
+      color: rgba(245,166,35,0.12);
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: -8px;
+    }
+    .cat-icon-box {
+      width: 52px; height: 52px;
+      background: var(--yellow);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cat-icon-box svg { width: 26px; height: 26px; color: var(--navy); }
+    .cat-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .cat-desc { font-size: 0.9rem; color: var(--text-muted); }
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .service-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--navy-mid);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      transition: border-color var(--transition);
+    }
+    .service-list-item:hover { border-color: rgba(245,166,35,0.2); }
+    .service-check {
+      width: 32px; height: 32px;
+      background: rgba(245,166,35,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .service-check svg { width: 14px; height: 14px; color: var(--yellow); }
+    .service-list-item h4 { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; text-transform: uppercase; margin-bottom: 4px; }
+    .service-list-item p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ========================
+       PORTFOLIO PAGE
+    ======================== */
+    .portfolio-hero {
+      background: var(--navy-mid);
+      padding: 80px 0 60px;
+      border-bottom: 1px solid rgba(245,166,35,0.1);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .portfolio-card {
+      background: var(--navy-mid);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .portfolio-img {
+      aspect-ratio: 16/10;
+      background: var(--navy-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-img-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245,166,35,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,166,35,0.05) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .portfolio-img svg { width: 40px; height: 40px; opacity: 0.15; position: relative; z-index: 1; }
+    .portfolio-img-label {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      opacity: 0.6;
+      position: relative;
+      z-index: 1;
+    }
+    .portfolio-tag {
+      position: absolute;
+      top: 16px; left: 16px;
+      background: var(--yellow);
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 50px;
+      z-index: 2;
+    }
+    .portfolio-card-body { padding: 24px; }
+    .portfolio-card-body h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .portfolio-card-body p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+    .portfolio-meta {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .portfolio-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .portfolio-meta-item svg { width: 14px; height: 14px; color: var(--yellow); }
+
+    /* ========================
+       CONTACT PAGE
+    ======================== */
+    .contact-hero {
+      background: var(--navy-mid);
+      padding: 80px 0 60px;
+      border-bottom: 1px solid rgba(245,166,35,0.1);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 48px;
+      margin-top: 60px;
+    }
+    .contact-info { }
+    .contact-block {
+      margin-bottom: 32px;
+    }
+    .contact-block-label {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 12px;
+    }
+    .contact-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--white);
+      transition: color var(--transition);
+    }
+    .contact-phone-link:hover { color: var(--yellow); }
+    .contact-phone-link svg { width: 28px; height: 28px; color: var(--yellow); }
+    .contact-address {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: var(--navy-mid);
+      border-radius: var(--radius);
+      font-size: 0.88rem;
+    }
+    .hours-day { color: var(--text-muted); }
+    .hours-time { font-weight: 600; color: var(--white); }
+    .hours-closed { color: var(--text-muted); font-size: 0.8rem; }
+    .map-container {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(245,166,35,0.15);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 420px;
+      display: block;
+      filter: grayscale(40%) contrast(1.1);
+    }
+    .contact-cta-text {
+      background: rgba(245,166,35,0.06);
+      border: 1px solid rgba(245,166,35,0.15);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-top: 32px;
+    }
+    .contact-cta-text h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .contact-cta-text p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* ========================
+       REVIEWS PLACEHOLDER
+    ======================== */
+    .reviews-section {
+      padding: 80px 0;
+      background: var(--navy-mid);
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .review-placeholder {
+      background: var(--navy-light);
+      border: 1px dashed rgba(245,166,35,0.2);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      text-align: center;
+    }
+    .stars { color: var(--yellow); font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 12px; }
+    .review-placeholder p { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+    .review-placeholder .reviewer { margin-top: 16px; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; color: var(--white); }
+
+    /* ========================
+       FOOTER
+    ======================== */
+    .footer {
+      background: var(--graphite);
+      border-top: 1px solid rgba(245,166,35,0.1);
+      padding: 60px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+    .footer-brand-name {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .footer-brand-name span { color: var(--yellow); }
+    .footer-tagline { font-size: 0.85rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 20px; max-width: 240px; }
+    .footer-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--yellow);
+    }
+    .footer-phone-link svg { width: 18px; height: 18px; }
+    .footer-col-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 20px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: color var(--transition);
+    }
+    .footer-link:hover { color: var(--white); }
+    .footer-info { font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; }
+    .footer-info strong { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-bottom p { font-size: 0.8rem; color: var(--text-muted); }
+
+    /* ========================
+       SCROLL REVEAL
+    ======================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========================
+       RESPONSIVE
+    ======================== */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-year-badge { right: 0; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .floating-call { display: flex; }
+      .section { padding: 60px 0; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .hero-deco { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .contact-phone-link { font-size: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Page header reusable */
+    .page-header {
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-bottom: 1px solid rgba(245,166,35,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(245,166,35,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(245,166,35,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .page-header-content { position: relative; z-index: 1; }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .breadcrumb span { cursor: pointer; transition: color var(--transition); }
+    .breadcrumb span:hover { color: var(--yellow); }
+    .breadcrumb .sep { color: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="nav-logo" onclick="showPage('home')">
+          <div class="nav-logo-main">A.D.S <span>Elektro</span></div>
+          <div class="nav-logo-sub">Instalacje • Monitoring • Automatyka</div>
+        </div>
+        <div class="nav-links">
+          <button class="nav-link active" id="nav-home" onclick="showPage('home')">Strona główna</button>
+          <button class="nav-link" id="nav-about" onclick="showPage('about')">O nas</button>
+          <button class="nav-link" id="nav-services" onclick="showPage('services')">Usługi</button>
+          <button class="nav-link" id="nav-portfolio" onclick="showPage('portfolio')">Realizacje</button>
+          <button class="nav-link" id="nav-contact" onclick="showPage('contact')">Kontakt</button>
+          <a href="tel:+48781880209" class="nav-cta">📞 +48 781 880 209</a>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-link active" id="mnav-home" onclick="showPage('home'); closeMobileMenu()">Strona główna</button>
+    <button class="mobile-menu-link" id="mnav-about" onclick="showPage('about'); closeMobileMenu()">O nas</button>
+    <button class="mobile-menu-link" id="mnav-services" onclick="showPage('services'); closeMobileMenu()">Usługi</button>
+    <button class="mobile-menu-link" id="mnav-portfolio" onclick="showPage('portfolio'); closeMobileMenu()">Realizacje</button>
+    <button class="mobile-menu-link" id="mnav-contact" onclick="showPage('contact'); closeMobileMenu()">Kontakt</button>
+    <a href="tel:+48781880209" class="mobile-menu-cta" onclick="closeMobileMenu()">📞 Zadzwoń: +48 781 880 209</a>
+  </div>
+
+  <!-- FLOATING CALL BUTTON -->
+  <a href="tel:+48781880209" class="floating-call">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Zadzwoń teraz
+  </a>
+
+  <!-- ==================== HOME PAGE ==================== -->
+  <div class="page active" id="page-home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid-overlay"></div>
+      <div class="hero-deco"></div>
+      <div class="hero-bolt">
+        <svg viewBox="0 0 200 200" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color:var(--yellow)">
+          <path d="M120 10L60 110h50l-30 80 80-100h-55z"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">Elektryk Opole i okolice</div>
+          <h1 class="hero-title">
+            Profesjonalne<br/>
+            instalacje elektryczne
+            <span class="accent-line">w Opolu i okolicy</span>
+          </h1>
+          <p class="hero-sub">Kompleksowe usługi elektryczne dla domu i firmy – szybko, solidnie i bezpiecznie. Działamy na terenie Opola i całego województwa opolskiego od 2020 roku.</p>
+          <div class="hero-actions">
+            <a href="tel:+48781880209" class="btn btn-primary btn-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              Zadzwoń teraz
+            </a>
+            <button class="btn btn-outline btn-lg" onclick="showPage('services')">
+              Darmowa wycena
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </button>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">5+</div>
+              <div class="hero-stat-label">Lat doświadczenia</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">200+</div>
+              <div class="hero-stat-label">Realizacji</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">100%</div>
+              <div class="hero-stat-label">Zadowolonych klientów</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO STRIP -->
+    <div class="intro-strip">
+      <div class="container">
+        <div class="intro-strip-inner">
+          <div class="intro-strip-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Opole i woj. opolskie
+          </div>
+          <div class="intro-strip-dot"></div>
+          <div class="intro-strip-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+            Działamy od 2020 roku
+          </div>
+          <div class="intro-strip-dot"></div>
+          <div class="intro-strip-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +48 781 880 209
+          </div>
+          <div class="intro-strip-dot"></div>
+          <div class="intro-strip-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            Gwarancja jakości
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES OVERVIEW -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Nasze usługi</div>
+          <h2 class="section-title">Co dla Ciebie<br/><span class="text-yellow">zrobimy?</span></h2>
+          <p class="section-subtitle">Specjalizujemy się w kompleksowych pracach elektrycznych i teletechnicznych – od projektu po odbiór.</p>
+        </div>
+        <div class="services-grid reveal">
+          <div class="service-card" onclick="showPage('services')">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.11 2.64L9 4.75 11.25 7l-1.41 1.41-2.25-2.25L5.48 8.27l2.25 2.25L6.32 11.93 4.07 9.68 2 11.75 10.25 20l2.07-2.07-1.84-1.84 6.32-6.32 1.84 1.84L20.75 9.5 12.5 1.25l-1.39 1.39zm1.39 1.39l5.47 5.47-1.41 1.41-5.47-5.47 1.41-1.41z"/></svg>
+            </div>
+            <h3>Instalacje elektryczne</h3>
+            <p>Montaż nowych instalacji elektrycznych w domach i budynkach użytkowych. Przyłącza, rozdzielnice, obwody – kompleksowo.</p>
+            <span class="arrow">Więcej →</span>
+          </div>
+          <div class="service-card" onclick="showPage('services')">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58C4.84 11.36 4.8 11.69 4.8 12s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+            </div>
+            <h3>Modernizacje i naprawy</h3>
+            <p>Wymiana starych instalacji, usuwanie usterek, pomiary elektryczne. Szybka diagnoza i skuteczna naprawa na miejscu.</p>
+            <span class="arrow">Więcej →</span>
+          </div>
+          <div class="service-card" onclick="showPage('services')">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
+            </div>
+            <h3>Monitoring i alarmy</h3>
+            <p>Instalacja systemów CCTV, kamer IP i analogowych. Systemy alarmowe chroniące Twój dom i firmę przez całą dobę.</p>
+            <span class="arrow">Więcej →</span>
+          </div>
+          <div class="service-card" onclick="showPage('services')">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25S13.24 11.25 12 11.25 9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-.75c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z"/></svg>
+            </div>
+            <h3>Domofony i automatyka</h3>
+            <p>Montaż domofonów, wideodomfonów, automatyki bram i szlabanów. Nowoczesne rozwiązania dla Twojej posesji.</p>
+            <span class="arrow">Więcej →</span>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:48px;" class="reveal">
+          <button class="btn btn-outline" onclick="showPage('services')">Zobacz wszystkie usługi →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section section--mid">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Dlaczego my?</div>
+          <h2 class="section-title">Wybierz lokalnego<br/><span class="text-yellow">specjalistę</span></h2>
+          <p class="section-subtitle">Jesteśmy firmą z Opola – znamy lokalne wymagania, szybko reagujemy i zawsze dotrzymujemy słowa.</p>
+        </div>
+        <div class="why-grid reveal">
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <h3>Szybkie terminy</h3>
+            <p>Rozumiemy, że czas to pieniądz. Staramy się realizować zlecenia w możliwie najkrótszym czasie bez utraty jakości.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <h3>Indywidualne podejście</h3>
+            <p>Każdy klient jest dla nas wyjątkowy. Słuchamy potrzeb i dopasowujemy rozwiązania do konkretnej sytuacji i budżetu.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            </div>
+            <h3>Solidność</h3>
+            <p>Robimy to, co obiecujemy. Uczciwa wycena, punktualność i staranność wykonania – to nasza wizytówka w regionie.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            </div>
+            <h3>Bezpieczeństwo</h3>
+            <p>Wszystkie prace wykonujemy zgodnie z normami i przepisami. Zapewniamy bezpieczeństwo użytkowników i instalacji.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <h3>Lokalna firma</h3>
+            <p>Jesteśmy stąd. Mieszkamy i pracujemy w Opolu – zależy nam na dobrej opinii w naszej społeczności. To zobowiązuje.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS PLACEHOLDER -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Opinie klientów</div>
+          <h2 class="section-title">Co mówią nasi<br/><span class="text-yellow">klienci</span></h2>
+        </div>
+        <div class="reviews-grid reveal">
+          <div class="review-placeholder">
+            <div class="stars">★★★★★</div>
+            <p>"Bardzo profesjonalna obsługa, szybkie wykonanie i uczciwa cena. Polecam każdemu w Opolu!"</p>
+            <div class="reviewer">– Marek K., Opole</div>
+          </div>
+          <div class="review-placeholder">
+            <div class="stars">★★★★★</div>
+            <p>"Panowie z ADS zrobili u nas pełną instalację elektryczną w nowym domu. Terminowo i bez zastrzeżeń."</p>
+            <div class="reviewer">– Anna W., Prószków</div>
+          </div>
+          <div class="review-placeholder">
+            <div class="stars">★★★★★</div>
+            <p>"Montaż monitoringu na najwyższym poziomie. Szybki kontakt, solidna praca. Zdecydowanie wrócimy."</p>
+            <div class="reviewer">– Tomasz R., Opole</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-content">
+          <h2>Potrzebujesz elektryka<br/>w Opolu?</h2>
+          <p>Zadzwoń i umów bezpłatną wycenę – odpowiadamy szybko, bez zbędnych formalności.</p>
+          <a href="tel:+48781880209" class="cta-phone-big">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +48 781 880 209
+          </a>
+          <div style="margin-top:20px; font-size:0.9rem; color:rgba(13,27,42,0.65);">Pon.–Pt. 7:00–17:00 | Opole i cały region</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER embedded -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name">A.D.S <span>Elektro</span>instalacje</div>
+            <p class="footer-tagline">Profesjonalne usługi elektryczne w Opolu i województwie opolskim. Działamy od 2020 roku.</p>
+            <a href="tel:+48781880209" class="footer-phone-link">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              +48 781 880 209
+            </a>
+          </div>
+          <div>
+            <div class="footer-col-title">Nawigacja</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('home')">Strona główna</span>
+              <span class="footer-link" onclick="showPage('about')">O nas</span>
+              <span class="footer-link" onclick="showPage('services')">Usługi</span>
+              <span class="footer-link" onclick="showPage('portfolio')">Realizacje</span>
+              <span class="footer-link" onclick="showPage('contact')">Kontakt</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Usługi</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('services')">Instalacje elektryczne</span>
+              <span class="footer-link" onclick="showPage('services')">Monitoring CCTV</span>
+              <span class="footer-link" onclick="showPage('services')">Systemy alarmowe</span>
+              <span class="footer-link" onclick="showPage('services')">Domofony</span>
+              <span class="footer-link" onclick="showPage('services')">Automatyka bram</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Kontakt</div>
+            <div class="footer-info">
+              <strong>A.D.S Elektroinstalacje s.c.</strong><br/>
+              Adrian Szwalbe, Damian Szwalbe<br/><br/>
+              ul. Wrocławska 337<br/>
+              45-960 Opole<br/><br/>
+              <strong>Godziny pracy:</strong><br/>
+              Pon.–Pt.: 7:00 – 17:00
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 A.D.S Elektroinstalacje s.c. Adrian Szwalbe, Damian Szwalbe. Wszelkie prawa zastrzeżone.</p>
+          <p>Elektryk Opole | Instalacje elektryczne Opole | Monitoring Opole</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== ABOUT PAGE ==================== -->
+  <div class="page" id="page-about">
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Strona główna</span>
+            <span class="sep">›</span>
+            <span>O nas</span>
+          </div>
+          <div class="section-tag">Kim jesteśmy</div>
+          <h1 class="section-title">O firmie<br/><span class="text-yellow">A.D.S Elektroinstalacje</span></h1>
+          <p class="section-subtitle">Lokalna firma elektryczna z Opola – profesjonalna, rzetelna, zawsze blisko Ciebie.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-block reveal">
+            <div class="about-img-placeholder">
+              <div class="hero-grid-overlay" style="border-radius:8px;"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M11.11 2.64L9 4.75 11.25 7l-1.41 1.41-2.25-2.25L5.48 8.27l2.25 2.25L6.32 11.93 4.07 9.68 2 11.75 10.25 20l2.07-2.07-1.84-1.84 6.32-6.32 1.84 1.84L20.75 9.5 12.5 1.25l-1.39 1.39z"/></svg>
+              <span>Zdjęcie zespołu</span>
+            </div>
+            <div class="about-year-badge">
+              <span class="year">2020</span>
+              <span class="label">Rok założenia</span>
+            </div>
+          </div>
+          <div class="about-text reveal">
+            <div class="section-tag">Nasza historia</div>
+            <h2 class="section-title" style="font-size:2.2rem;">Profesjonalizm<br/><span class="text-yellow">od samego początku</span></h2>
+            <p>Firma A.D.S Elektroinstalacje s.c. powstała w 2020 roku z inicjatywy dwóch braci – Adriana i Damiana Szwalbe. Od pierwszego dnia naszą misją było świadczenie usług elektrycznych na najwyższym poziomie, z pełnym zaangażowaniem i poszanowaniem czasu klienta.</p>
+            <p>Działamy na terenie Opola i całego województwa opolskiego. W ciągu kilku lat zdobyliśmy zaufanie setek klientów indywidualnych i firm, realizując zlecenia od prostych napraw po kompleksowe instalacje w nowych budynkach.</p>
+            <p>Jesteśmy lokalną firmą – znamy specyfikę regionu, warunki techniczne budynków i oczekiwania mieszkańców Opolszczyzny. To pozwala nam działać szybciej i skuteczniej niż firmy z zewnątrz.</p>
+            <h3 style="font-family:var(--font-display); font-size:1rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--yellow); margin:28px 0 16px;">Właściciele firmy</h3>
+            <div class="owner-card">
+              <div class="owner-avatar">AS</div>
+              <div class="owner-info">
+                <div class="owner-name">Adrian Szwalbe</div>
+                <div class="owner-role">Współwłaściciel · Elektroinstalacje, automatyka</div>
+              </div>
+            </div>
+            <div class="owner-card" style="margin-top:12px;">
+              <div class="owner-avatar">DS</div>
+              <div class="owner-info">
+                <div class="owner-name">Damian Szwalbe</div>
+                <div class="owner-role">Współwłaściciel · Teletechnika, monitoring</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY TRUST US -->
+    <section class="section section--mid">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-tag">Zaufanie</div>
+          <h2 class="section-title">Dlaczego warto<br/><span class="text-yellow">nam zaufać?</span></h2>
+          <p class="section-subtitle">Nie prosimy o zaufanie na słowo – udowadniamy je każdym wykonanym zleceniem.</p>
+        </div>
+        <div class="trust-grid reveal">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            </div>
+            <div>
+              <h4>Zgodność z normami</h4>
+              <p>Wszystkie instalacje wykonujemy zgodnie z obowiązującymi normami PN-IEC i przepisami prawa budowlanego.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            </div>
+            <div>
+              <h4>Uczciwa wycena</h4>
+              <p>Zawsze przedstawiamy szczegółową wycenę przed rozpoczęciem prac. Bez ukrytych kosztów i niespodzianek.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+            </div>
+            <div>
+              <h4>Doświadczenie</h4>
+              <p>Ponad 5 lat praktyki w Opolu i regionie. Setki zrealizowanych projektów – od małych napraw po duże inwestycje.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <div>
+              <h4>Lokalna firma</h4>
+              <p>Jesteśmy tutaj – w Opolu. Możesz nas polecić sąsiadom i sprawdzić naszą reputację wśród mieszkańców regionu.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <div>
+              <h4>Szybka realizacja</h4>
+              <p>Szanujemy Twój czas. Staramy się przystępować do pracy w możliwie najkrótszym czasie od kontaktu.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.34C18 2.54 16.5 1 14.66 1c-1.3 0-2.4.76-3.07 1.9L12 5.69l-.59-2.79C10.74 1.76 9.64 1 8.34 1 6.5 1 5 2.54 5 4.66c0 .46.11.9.18 1.34H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
+            </div>
+            <div>
+              <h4>Gwarancja na prace</h4>
+              <p>Udzielamy gwarancji na wykonane instalacje. Jeśli coś nie działa poprawnie – wracamy i naprawiamy bezpłatnie.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-content">
+          <h2>Chcesz wiedzieć więcej?<br/>Po prostu zadzwoń!</h2>
+          <p>Jesteśmy dostępni od poniedziałku do piątku w godzinach 7:00–17:00.</p>
+          <a href="tel:+48781880209" class="cta-phone-big">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +48 781 880 209
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name">A.D.S <span>Elektro</span>instalacje</div>
+            <p class="footer-tagline">Profesjonalne usługi elektryczne w Opolu i województwie opolskim. Działamy od 2020 roku.</p>
+            <a href="tel:+48781880209" class="footer-phone-link">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              +48 781 880 209
+            </a>
+          </div>
+          <div>
+            <div class="footer-col-title">Nawigacja</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('home')">Strona główna</span>
+              <span class="footer-link" onclick="showPage('about')">O nas</span>
+              <span class="footer-link" onclick="showPage('services')">Usługi</span>
+              <span class="footer-link" onclick="showPage('portfolio')">Realizacje</span>
+              <span class="footer-link" onclick="showPage('contact')">Kontakt</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Usługi</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('services')">Instalacje elektryczne</span>
+              <span class="footer-link" onclick="showPage('services')">Monitoring CCTV</span>
+              <span class="footer-link" onclick="showPage('services')">Systemy alarmowe</span>
+              <span class="footer-link" onclick="showPage('services')">Domofony</span>
+              <span class="footer-link" onclick="showPage('services')">Automatyka bram</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Kontakt</div>
+            <div class="footer-info">
+              <strong>A.D.S Elektroinstalacje s.c.</strong><br/>
+              ul. Wrocławska 337<br/>
+              45-960 Opole<br/><br/>
+              <strong>Godziny pracy:</strong><br/>
+              Pon.–Pt.: 7:00 – 17:00
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 A.D.S Elektroinstalacje s.c. Wszelkie prawa zastrzeżone.</p>
+          <p>Elektryk Opole | Instalacje elektryczne Opole</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== SERVICES PAGE ==================== -->
+  <div class="page" id="page-services">
+
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Strona główna</span>
+            <span class="sep">›</span>
+            <span>Usługi</span>
+          </div>
+          <div class="section-tag">Pełen zakres usług</div>
+          <h1 class="section-title">Nasze<br/><span class="text-yellow">usługi</span></h1>
+          <p class="section-subtitle">Kompleksowa obsługa elektryczna dla domów, mieszkań i obiektów komercyjnych w Opolu i okolicy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+
+        <!-- 1. Instalacje elektryczne -->
+        <div class="service-category reveal">
+          <div class="cat-header">
+            <div class="cat-num">01</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                <div class="cat-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.11 2.64L9 4.75 11.25 7l-1.41 1.41-2.25-2.25L5.48 8.27l2.25 2.25L6.32 11.93 4.07 9.68 2 11.75 10.25 20l2.07-2.07-1.84-1.84 6.32-6.32 1.84 1.84L20.75 9.5 12.5 1.25l-1.39 1.39z"/></svg>
+                </div>
+                <div class="cat-title">Instalacje elektryczne</div>
+              </div>
+              <div class="cat-desc">Montaż i modernizacja instalacji elektrycznych w budynkach mieszkalnych i komercyjnych na terenie Opola i woj. opolskiego.</div>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Montaż nowych instalacji</h4>
+                <p>Projektowanie i wykonanie kompletnych instalacji elektrycznych w nowych budynkach jednorodzinnych i wielorodzinnych.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Przyłącza energetyczne</h4>
+                <p>Wykonanie przyłączy elektrycznych do budynków, montaż złączy kablowych i licznikowych.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Pomiary elektryczne</h4>
+                <p>Pomiary ochronne, rezystancji izolacji, impedancji pętli zwarcia i skuteczności ochrony przed porażeniem.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Modernizacje instalacji</h4>
+                <p>Wymiana przestarzałych instalacji, rozdzielnic elektrycznych, kabli i osprzętu w starych budynkach.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Tablice rozdzielcze</h4>
+                <p>Montaż i wyposażenie rozdzielnic elektrycznych, instalacja bezpieczników, wyłączników różnicowoprądowych.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Instalacje zewnętrzne</h4>
+                <p>Oświetlenie elewacji, ogrodów, ulic i terenów zewnętrznych. Instalacje odgromowe.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Systemy zabezpieczeń -->
+        <div class="service-category reveal">
+          <div class="cat-header">
+            <div class="cat-num">02</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                <div class="cat-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/></svg>
+                </div>
+                <div class="cat-title">Systemy zabezpieczeń</div>
+              </div>
+              <div class="cat-desc">Profesjonalne systemy ochrony dla domów i firm – monitoring CCTV i systemy alarmowe dostosowane do Twoich potrzeb.</div>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Monitoring CCTV</h4>
+                <p>Montaż kamer analogowych i IP, konfiguracja rejestratorów DVR/NVR. Zdalny podgląd przez smartfon.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Systemy alarmowe</h4>
+                <p>Instalacja central alarmowych, czujek ruchu, kontaktronów i sygnalizatorów. Integracja z GSM i monitoringiem.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Serwis i konserwacja</h4>
+                <p>Przeglądy techniczne systemów alarmowych i monitoringu, aktualizacja oprogramowania, wymiana elementów.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Instalacje teletechniczne -->
+        <div class="service-category reveal">
+          <div class="cat-header">
+            <div class="cat-num">03</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                <div class="cat-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25S13.24 11.25 12 11.25 9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-.75c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z"/></svg>
+                </div>
+                <div class="cat-title">Instalacje teletechniczne</div>
+              </div>
+              <div class="cat-desc">Nowoczesne systemy komunikacji i sygnalizacji dla domów i biur w Opolu.</div>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Domofony i wideodomofony</h4>
+                <p>Montaż domofonów jedno- i wielorodzinnych, wideodomfonów z kamerą i możliwością zdalnego sterowania.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Sieci strukturalne</h4>
+                <p>Instalacja sieci komputerowych LAN, okablowanie strukturalne dla domów i biur, montaż routerów i switchy.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Instalacje antenowe</h4>
+                <p>Montaż anten DVB-T, SAT, instalacje zbiorcze w budynkach wielorodzinnych, rozdzielacze sygnału TV.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Automatyka i inne -->
+        <div class="service-category reveal">
+          <div class="cat-header">
+            <div class="cat-num">04</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                <div class="cat-icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58C4.84 11.36 4.8 11.69 4.8 12s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                </div>
+                <div class="cat-title">Automatyka i inne</div>
+              </div>
+              <div class="cat-desc">Nowoczesne systemy automatyki i biały montaż – wygoda i komfort w codziennym życiu.</div>
+            </div>
+          </div>
+          <div class="service-list">
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Automatyka bram</h4>
+                <p>Montaż napędów bram garażowych, wjazdowych i przesuwnych. Instalacja sterowników i pilotów.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Podłączanie urządzeń AGD</h4>
+                <p>Podłączenie płyt indukcyjnych, piekarników, zmywarek, pralek. Wykonanie dedykowanych obwodów zasilających.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Biały montaż</h4>
+                <p>Montaż gniazd, włączników, opraw oświetleniowych – fachowo, estetycznie i zgodnie z życzeniem klienta.</p>
+              </div>
+            </div>
+            <div class="service-list-item">
+              <div class="service-check"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div>
+              <div>
+                <h4>Usuwanie usterek</h4>
+                <p>Szybka diagnoza i naprawa awarii elektrycznych. Wyjeżdżamy na miejsce i eliminujemy problem w krótkim czasie.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-content">
+          <h2>Zadzwoń po wycenę –<br/>to nic nie kosztuje!</h2>
+          <p>Bezpłatna wycena telefoniczna lub na miejscu. Szybka odpowiedź, konkretna cena.</p>
+          <a href="tel:+48781880209" class="cta-phone-big">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +48 781 880 209
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name">A.D.S <span>Elektro</span>instalacje</div>
+            <p class="footer-tagline">Profesjonalne usługi elektryczne w Opolu. Działamy od 2020 roku.</p>
+            <a href="tel:+48781880209" class="footer-phone-link">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              +48 781 880 209
+            </a>
+          </div>
+          <div>
+            <div class="footer-col-title">Nawigacja</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('home')">Strona główna</span>
+              <span class="footer-link" onclick="showPage('about')">O nas</span>
+              <span class="footer-link" onclick="showPage('services')">Usługi</span>
+              <span class="footer-link" onclick="showPage('portfolio')">Realizacje</span>
+              <span class="footer-link" onclick="showPage('contact')">Kontakt</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Usługi</div>
+            <div class="footer-links">
+              <span class="footer-link">Instalacje elektryczne</span>
+              <span class="footer-link">Monitoring CCTV</span>
+              <span class="footer-link">Systemy alarmowe</span>
+              <span class="footer-link">Domofony</span>
+              <span class="footer-link">Automatyka bram</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Kontakt</div>
+            <div class="footer-info">
+              <strong>A.D.S Elektroinstalacje s.c.</strong><br/>
+              ul. Wrocławska 337, 45-960 Opole<br/><br/>
+              <strong>Pon.–Pt.: 7:00–17:00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 A.D.S Elektroinstalacje s.c. Wszelkie prawa zastrzeżone.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== PORTFOLIO PAGE ==================== -->
+  <div class="page" id="page-portfolio">
+
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Strona główna</span>
+            <span class="sep">›</span>
+            <span>Realizacje</span>
+          </div>
+          <div class="section-tag">Nasze prace</div>
+          <h1 class="section-title">Wybrane<br/><span class="text-yellow">realizacje</span></h1>
+          <p class="section-subtitle">Przykłady naszych prac w Opolu i okolicy. Każde zlecenie traktujemy indywidualnie – od małej naprawy po kompleksową instalację.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <div class="portfolio-grid reveal">
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-img-pattern"></div>
+              <div class="portfolio-tag">Instalacja elektryczna</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              <span class="portfolio-img-label">Zdjęcie realizacji</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Instalacja w domu jednorodzinnym</h3>
+              <p>Kompleksowa instalacja elektryczna od zera w nowym domu jednorodzinnym. Montaż rozdzielnicy, wykonanie wszystkich obwodów, biały montaż i pomiary odbiorcze.</p>
+              <div class="portfolio-meta">
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  Opole
+                </div>
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                  Dom jednorodzinny
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-img-pattern"></div>
+              <div class="portfolio-tag">Monitoring CCTV</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              <span class="portfolio-img-label">Zdjęcie realizacji</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Montaż systemu monitoringu</h3>
+              <p>Instalacja 8 kamer IP zewnętrznych i wewnętrznych, rejestratorNVR z dysk 2TB, konfiguracja zdalnego podglądu przez smartfon dla klienta indywidualnego.</p>
+              <div class="portfolio-meta">
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  Dąbrowa, k. Opola
+                </div>
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                  8 kamer IP
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-img-pattern"></div>
+              <div class="portfolio-tag">Modernizacja</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58C4.84 11.36 4.8 11.69 4.8 12s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+              <span class="portfolio-img-label">Zdjęcie realizacji</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Modernizacja instalacji w bloku</h3>
+              <p>Wymiana starej instalacji aluminiowej na miedzianą w mieszkaniu 60m². Nowa rozdzielnica, obwody dla kuchni indukcyjnej, nowe gniazda i włączniki.</p>
+              <div class="portfolio-meta">
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  Opole Centrum
+                </div>
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                  Mieszkanie 60m²
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-img-pattern"></div>
+              <div class="portfolio-tag">Automatyka bram</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+              <span class="portfolio-img-label">Zdjęcie realizacji</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Automatyka bramy wjazdowej</h3>
+              <p>Montaż napędu bramy przesuwnej z systemem sterowania przez pilot, smartfon oraz integracją z wideodomfonem przy wejściu na posesję.</p>
+              <div class="portfolio-meta">
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  Prószków
+                </div>
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                  Dom z garażem
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-img-pattern"></div>
+              <div class="portfolio-tag">Alarm</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+              <span class="portfolio-img-label">Zdjęcie realizacji</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>System alarmowy dla firmy</h3>
+              <p>Instalacja systemu alarmowego z centralą, czujkami ruchu PIR, kontaktronami na drzwiach i oknach oraz sygnalizatorem zewnętrznym dla biura w Opolu.</p>
+              <div class="portfolio-meta">
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  Opole
+                </div>
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                  Obiekt komercyjny
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <div class="portfolio-img-pattern"></div>
+              <div class="portfolio-tag">Instalacja elektryczna</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M2 17h20v2H2zm1.15-4.05L4 11.47l.85 1.48 1.3-.75-.85-1.48H7v-1.5H5.3l.85-1.47L4.85 7l-.85 1.47L3.15 7l-1.3.75.85 1.47H1v1.5h1.7l-.85 1.48 1.3.75zm6.7 0l.85-1.48 1.3.75-.85-1.48H13v-1.5h-1.7l.85-1.47-1.3-.75-.85 1.47L9.15 7l-1.3.75.85 1.47H7v1.5h1.7l-.85 1.48 1.3.75.85-1.48zm6.7 0l.85-1.48 1.3.75-.85-1.48H19v-1.5h-1.7l.85-1.47-1.3-.75-.85 1.47-1.7-1.47zm0 0"/></svg>
+              <span class="portfolio-img-label">Zdjęcie realizacji</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h3>Oświetlenie zewnętrzne posesji</h3>
+              <p>Projektowanie i montaż oświetlenia LED ogrodu, podjazdu i elewacji domu. Instalacja czujników ruchu i zmierzchu dla automatycznego sterowania.</p>
+              <div class="portfolio-meta">
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  Dobrzeń Wielki
+                </div>
+                <div class="portfolio-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                  Instalacja LED
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Info -->
+        <div style="text-align:center; margin-top:60px; padding:32px; background:var(--navy-mid); border:1px solid rgba(245,166,35,0.1); border-radius:var(--radius-lg);" class="reveal">
+          <div class="section-tag">Masz pytania?</div>
+          <h3 style="font-family:var(--font-display);font-weight:800;font-size:1.6rem;text-transform:uppercase;margin-bottom:12px;">Chcesz zobaczyć więcej realizacji?</h3>
+          <p style="color:var(--text-muted); margin-bottom:24px;">Zadzwoń do nas – chętnie opiszemy więcej naszych projektów i odpowiemy na wszystkie pytania.</p>
+          <a href="tel:+48781880209" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +48 781 880 209
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name">A.D.S <span>Elektro</span>instalacje</div>
+            <p class="footer-tagline">Profesjonalne usługi elektryczne w Opolu. Działamy od 2020 roku.</p>
+            <a href="tel:+48781880209" class="footer-phone-link">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              +48 781 880 209
+            </a>
+          </div>
+          <div>
+            <div class="footer-col-title">Nawigacja</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('home')">Strona główna</span>
+              <span class="footer-link" onclick="showPage('about')">O nas</span>
+              <span class="footer-link" onclick="showPage('services')">Usługi</span>
+              <span class="footer-link" onclick="showPage('portfolio')">Realizacje</span>
+              <span class="footer-link" onclick="showPage('contact')">Kontakt</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Obszar działania</div>
+            <div class="footer-links">
+              <span class="footer-link">Opole</span>
+              <span class="footer-link">Prószków</span>
+              <span class="footer-link">Dobrzeń Wielki</span>
+              <span class="footer-link">Dąbrowa</span>
+              <span class="footer-link">Woj. opolskie</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Kontakt</div>
+            <div class="footer-info">
+              <strong>A.D.S Elektroinstalacje s.c.</strong><br/>
+              ul. Wrocławska 337, 45-960 Opole<br/><br/>
+              <strong>Pon.–Pt.: 7:00–17:00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 A.D.S Elektroinstalacje s.c. Wszelkie prawa zastrzeżone.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== CONTACT PAGE ==================== -->
+  <div class="page" id="page-contact">
+
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Strona główna</span>
+            <span class="sep">›</span>
+            <span>Kontakt</span>
+          </div>
+          <div class="section-tag">Skontaktuj się z nami</div>
+          <h1 class="section-title">Zadzwoń –<br/><span class="text-yellow">odpowiemy szybko</span></h1>
+          <p class="section-subtitle">Nie czekaj z awarii – zadzwoń teraz. Oferujemy bezpłatną wycenę telefoniczną lub na miejscu w Opolu i okolicy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- INFO -->
+          <div class="reveal">
+            <div class="contact-block">
+              <div class="contact-block-label">Telefon</div>
+              <a href="tel:+48781880209" class="contact-phone-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                +48 781 880 209
+              </a>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-block-label">Adres</div>
+              <div class="contact-address">
+                <strong style="color:var(--white);">A.D.S Elektroinstalacje s.c.</strong><br/>
+                Adrian Szwalbe, Damian Szwalbe<br/>
+                ul. Wrocławska 337<br/>
+                45-960 Opole
+              </div>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-block-label">Godziny pracy</div>
+              <div class="hours-grid">
+                <div class="hours-row">
+                  <span class="hours-day">Poniedziałek</span>
+                  <span class="hours-time">7:00 – 17:00</span>
+                </div>
+                <div class="hours-row">
+                  <span class="hours-day">Wtorek</span>
+                  <span class="hours-time">7:00 – 17:00</span>
+                </div>
+                <div class="hours-row">
+                  <span class="hours-day">Środa</span>
+                  <span class="hours-time">7:00 – 17:00</span>
+                </div>
+                <div class="hours-row">
+                  <span class="hours-day">Czwartek</span>
+                  <span class="hours-time">7:00 – 17:00</span>
+                </div>
+                <div class="hours-row">
+                  <span class="hours-day">Piątek</span>
+                  <span class="hours-time">7:00 – 17:00</span>
+                </div>
+                <div class="hours-row" style="grid-column:span 1">
+                  <span class="hours-day">Sobota – Niedziela</span>
+                  <span class="hours-closed">Zamknięte</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-cta-text">
+              <h3>💡 Nie zwlekaj!</h3>
+              <p>Potrzebujesz elektryka w Opolu? Zadzwoń teraz – wyceniamy bezpłatnie, przyjeżdżamy szybko. Działamy na terenie Opola i całego województwa opolskiego.</p>
+              <div style="margin-top:20px;">
+                <a href="tel:+48781880209" class="btn btn-primary">Zadzwoń teraz</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAP -->
+          <div class="reveal">
+            <div class="contact-block-label" style="margin-bottom:16px;">Gdzie nas znaleźć</div>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.4!2d17.9213!3d50.6598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zV3JvY8WCYXdza2EgMzM3LCBPcG9sZQ!5e0!3m2!1spl!2spl!4v1710000000000"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="A.D.S Elektroinstalacje - mapa dojazdu Opole"
+              ></iframe>
+            </div>
+            <div style="margin-top:20px; padding:16px; background:var(--navy-mid); border-radius:var(--radius); border-left:3px solid var(--yellow);">
+              <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.65;">
+                <strong style="color:var(--white);">📍 ul. Wrocławska 337, Opole</strong><br/>
+                Dojazd od strony Wrocławia, przy wyjeździe z Opola. Łatwy dojazd, parking przed posesją.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service area -->
+        <div style="margin-top:60px;" class="reveal">
+          <div class="section-tag text-center">Obszar działania</div>
+          <h2 class="section-title text-center" style="font-size:2rem;">Obsługujemy <span class="text-yellow">cały region</span></h2>
+          <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:32px;">
+            <span style="background:var(--navy-mid);border:1px solid rgba(245,166,35,0.15);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Opole</span>
+            <span style="background:var(--navy-mid);border:1px solid rgba(245,166,35,0.15);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Prószków</span>
+            <span style="background:var(--navy-mid);border:1px solid rgba(245,166,35,0.15);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Dobrzeń Wielki</span>
+            <span style="background:var(--navy-mid);border:1px solid rgba(245,166,35,0.15);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Dąbrowa</span>
+            <span style="background:var(--navy-mid);border:1px solid rgba(245,166,35,0.15);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Chrząstowice</span>
+            <span style="background:var(--navy-mid);border:1px solid rgba(245,166,35,0.15);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Turawa</span>
+            <span style="background:var(--navy-mid);border:1px solid rgba(245,166,35,0.15);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;">Komprachcice</span>
+            <span style="background:var(--navy-light);border:1px solid rgba(245,166,35,0.3);padding:10px 20px;border-radius:50px;font-size:0.88rem;font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--yellow);">+ cały woj. opolskie</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-banner-content">
+          <h2>Gotowy na<br/>bezpłatną wycenę?</h2>
+          <p>Jeden telefon wystarczy. Odpowiadamy szybko, bez zbędnych formalności.</p>
+          <a href="tel:+48781880209" class="cta-phone-big">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            +48 781 880 209
+          </a>
+          <div style="margin-top:20px; font-size:0.9rem; color:rgba(13,27,42,0.65);">Pon.–Pt. 7:00–17:00 | Opole i cały region opolski</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-name">A.D.S <span>Elektro</span>instalacje</div>
+            <p class="footer-tagline">Profesjonalne usługi elektryczne w Opolu i województwie opolskim. Działamy od 2020 roku.</p>
+            <a href="tel:+48781880209" class="footer-phone-link">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              +48 781 880 209
+            </a>
+          </div>
+          <div>
+            <div class="footer-col-title">Nawigacja</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('home')">Strona główna</span>
+              <span class="footer-link" onclick="showPage('about')">O nas</span>
+              <span class="footer-link" onclick="showPage('services')">Usługi</span>
+              <span class="footer-link" onclick="showPage('portfolio')">Realizacje</span>
+              <span class="footer-link" onclick="showPage('contact')">Kontakt</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Usługi</div>
+            <div class="footer-links">
+              <span class="footer-link" onclick="showPage('services')">Instalacje elektryczne</span>
+              <span class="footer-link" onclick="showPage('services')">Monitoring CCTV</span>
+              <span class="footer-link" onclick="showPage('services')">Systemy alarmowe</span>
+              <span class="footer-link" onclick="showPage('services')">Domofony</span>
+              <span class="footer-link" onclick="showPage('services')">Automatyka bram</span>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Kontakt</div>
+            <div class="footer-info">
+              <strong>A.D.S Elektroinstalacje s.c.</strong><br/>
+              Adrian Szwalbe, Damian Szwalbe<br/>
+              ul. Wrocławska 337<br/>
+              45-960 Opole<br/><br/>
+              <strong>Pon.–Pt.: 7:00 – 17:00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 A.D.S Elektroinstalacje s.c. Wszelkie prawa zastrzeżone.</p>
+          <p>Elektryk Opole | Instalacje elektryczne Opole | Monitoring Opole</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // =====================
+    // PAGE NAVIGATION
+    // =====================
+    const pages = ['home','about','services','portfolio','contact'];
+
+    function showPage(pageId) {
+      pages.forEach(p => {
+        document.getElementById('page-' + p).classList.remove('active');
+        const navBtn = document.getElementById('nav-' + p);
+        const mNavBtn = document.getElementById('mnav-' + p);
+        if (navBtn) navBtn.classList.remove('active');
+        if (mNavBtn) mNavBtn.classList.remove('active');
+      });
+
+      const page = document.getElementById('page-' + pageId);
+      if (page) page.classList.add('active');
+
+      const navBtn = document.getElementById('nav-' + pageId);
+      const mNavBtn = document.getElementById('mnav-' + pageId);
+      if (navBtn) navBtn.classList.add('active');
+      if (mNavBtn) mNavBtn.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Trigger reveal for new page
+      setTimeout(initReveal, 100);
+
+      // Update title
+      const titles = {
+        home: 'Elektryk Opole – A.D.S Elektroinstalacje | Instalacje elektryczne',
+        about: 'O nas – A.D.S Elektroinstalacje Opole',
+        services: 'Usługi elektryczne Opole – A.D.S Elektroinstalacje',
+        portfolio: 'Realizacje – A.D.S Elektroinstalacje Opole',
+        contact: 'Kontakt – A.D.S Elektroinstalacje Opole'
+      };
+      document.title = titles[pageId] || titles.home;
+    }
+
+    // =====================
+    // MOBILE MENU
+    // =====================
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.getElementById('hamburger');
+      menu.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
+
+    // =====================
+    // STICKY NAV
+    // =====================
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // =====================
+    // SCROLL REVEAL
+    // =====================
+    function initReveal() {
+      const activePage = document.querySelector('.page.active');
+      if (!activePage) return;
+
+      const elements = activePage.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      elements.forEach(el => {
+        el.classList.remove('visible');
+        observer.observe(el);
+      });
+    }
+
+    // =====================
+    // INIT
+    // =====================
+    document.addEventListener('DOMContentLoaded', () => {
+      initReveal();
+
+      // Close mobile menu on outside click
+      document.addEventListener('click', (e) => {
+        const menu = document.getElementById('mobileMenu');
+        const hamburger = document.getElementById('hamburger');
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+          closeMobileMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
